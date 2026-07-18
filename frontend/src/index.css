@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ===========================
+   RESET
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   ROOT VARIABLES
+=========================== */
+
+:root {
+  --primary: #14532d;
+  --primary-light: #166534;
+  --primary-dark: #0f3d22;
+
+  --white: #ffffff;
+  --background: #f5f7f6;
+  --surface: #ffffff;
+
+  --text: #1f2937;
+  --text-light: #6b7280;
+
+  --border: #e5e7eb;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 35px rgba(0, 0, 0, 0.12);
+
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--background);
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ===========================
+   FORM ELEMENTS
+=========================== */
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+input,
+textarea {
+  outline: none;
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef2ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection {
+  background: rgba(20, 83, 45, 0.2);
+}
+
+/* ===========================
+   COMMON UTILITIES
+=========================== */
+
+.text-center {
+  text-align: center;
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+}
